@@ -10,7 +10,7 @@ workspace "dwproxy"
 
 	location "build/"
 
-	architecture "x64"
+	-- architecture "x64"
 
     filter "configurations:Debug"
         defines "_DEBUG"
@@ -19,16 +19,16 @@ workspace "dwproxy"
         defines "NDEBUG"
         optimize "Speed"
 
-project "dwproxy"
-	language "C++"
-	kind "SharedLib"
+	project "dwproxy"
+		language "C++"
+		kind "SharedLib"
 
-	defines "STEAM_API_EXPORTS"
+		defines "STEAM_API_EXPORTS"
 
-	includedirs { "include/", "deplibs/steamworks/" }
+		includedirs { "include/", "deplibs/steamworks/" }
 
-	files
-	{
-		"include/**.h",
-		"src/**.cpp"
-	}
+		files
+		{
+			"include/**.h",
+			"src/**.cpp"
+		}
